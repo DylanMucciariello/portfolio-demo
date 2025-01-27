@@ -158,6 +158,43 @@ section {
     font-weight: 500;
 }
 
+.skills {
+    background-color: var(--nav-bg);
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.skills-intro {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: #e0e7ff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+}
+
 /* Projects Section */
 
 /* Add these specific rules for Projects and Contact sections */
