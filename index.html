@@ -7,11 +7,11 @@
     <title>Dylan Mucciariello</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- About Section -->
+    <!-- NavBar -->
     <nav class="navbar">
         <div class="nav-container">
             <h1>Dylan Mucciariello</h1>
@@ -33,25 +33,72 @@
                 Provident soluta enim quo nulla totam officiis nobis quos eaque, sint, unde dicta dolores?</p>
             <div class="social-links">
                 <a href="https://github.com/yourusername" target="_blank">
-                    <img src="assets/images/github-logo.jpg" alt="GitHub Profile" class="social-icon">
+                    <img src="assets/GitHub-Mark-ea2971cee799 (1).png" alt="GitHub Profile" class="social-icon">
                 </a>
                 <a href="https://linkedin.com/in/yourusername" target="_blank">
-                    <img src="assets/images/linkedin-logo.jpg" alt="LinkedIn Profile" class="social-icon">
+                    <img src="assets/LinkedIn_icon.svg (1).png" alt="LinkedIn Profile" class="social-icon">
                 </a>
+            </div>
+        </div>
+        <img src="assets/profile-placeholder (1).jpg" alt="Profile" class="profile-img">
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="assets/Storm-surge.png" alt="Project 1" class="project-img">
+                <div class="project-content">
+                    <h3>Storm Surge</h3>
+                    <p>Storm Surge is a comprehensive full-stack web application integrated with prototype IoT
+                        tracking devices. It aims to streamline and enhance hurricane relief efforts by connecting
+                        volunteers, shelters, and donation centers in real time. By providing real-time alerts and
+                        a centralized volunteer registration portal, Storm Surge simplifies relief efforts and
+                        ensures that all essential information is accessible in one platform.</p>
+                    <a href="#https://devpost.com/software/storm-surge?ref_content=my-projects-tab&ref_feature=my_projects"
+                        target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/shrimptype.png" alt="Project 2" class="project-img">
+                <div class="project-content">
+                    <h3>shrimptype</h3>
+                    <p>Shrimp Type is a sleek React and TypeScript web app designed to improve typing skills. It
+                        features timed and word-based tests, tracks WPM and accuracy, and visualizes progress with
+                        dynamic graphs. With a clean, responsive design, it makes typing practice engaging and
+                        insightful.
+                    </p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="16b48317-7e16-4a81-a24f-766bc93992c9">
 
-    <section id="About">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-            div
-        </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
+    <script src="app.js"></script>
 
-
-    <script src="" async defer></script>
 </body>
 
 </html>

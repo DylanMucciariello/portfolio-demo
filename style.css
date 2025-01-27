@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0ea5e9;    /* Vibrant blue */
+    --secondary-color: #0369a1;  /* Darker blue */
+    --text-color: #0f172a;      /* Navy text */
+    --bg-color: #f8fafc;        /* Light gray-blue background */
+    --nav-bg: #1e293b;          /* Dark blue-gray nav */
+    --nav-text: #ffffff;        /* White text for nav */
+    --accent-color: #e0f2fe;    /* Light blue accent */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container h1 {
+    color: var(--nav-text);
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    color: var(--nav-text);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a.active {
+    color: var(--primary-color);
+    opacity: 1;
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh; /* Makes sections full-screen */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+/* About Section */
+#about {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-content {
+    flex: 0 1 600px; /* Limits width while allowing shrinking */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.about-content h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    max-width: 65ch; /* Optimal line length for readability */
+    line-height: 1.6;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 350px; 
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+.social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.social-icon {
+    /* Controls the size of the icons */
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    /* Makes the icons slightly larger when hovered */
+    transform: scale(1.1);
+}
+
+/* Projects Section */
+
+/* Add these specific rules for Projects and Contact sections */
+#projects, #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background-color: var(--bg-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+/* Contact Section */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    #about {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 3rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .about-content {
+        align-items: center;
+    }
+
+    .profile-img {
+        max-width: 300px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+
+    .profile-img {
+        max-width: 250px;
+    }
+
+    .about-content h2 {
+        font-size: 1.75rem;
+    }
+}
