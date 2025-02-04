@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Form validation
+// Form validation (not active right now)
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 

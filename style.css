@@ -42,7 +42,6 @@ canvas#particleCanvas {
     z-index: -1;
 }
 
-
 /* Navigation Styles */
 .navbar {
     position: fixed;
@@ -164,15 +163,6 @@ section h2::after {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-}
-/*this puts gray box around about me 
-.intro-section {
-    /* New container for the intro text 
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 2rem;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Update other text colors for visibility */
